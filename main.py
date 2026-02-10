@@ -14,7 +14,12 @@ app.add_middleware(
 )
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+from openai import OpenAI
+import os
+
+client = OpenAI()
+
 
 TRANSCRIPT_FILE = "transcript/video1.txt"
 
